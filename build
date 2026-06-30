@@ -1,0 +1,8 @@
+#!/bin/sh
+
+sudo podman run --rm --privileged --network=host \
+  -v "$PWD:/work" -w /work \
+  archlinux:latest \
+  bash -lc 'pacman -Syu --noconfirm mkosi && mkosi build'
+
+# watch me vibecode this lol

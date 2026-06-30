@@ -1,0 +1,11 @@
+[Unit]
+Description=Initial system setup
+ConditionPathExists=!/var/lib/first-boot-done
+Before=getty@tty1.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/first-boot.sh
+
+[Install]
+WantedBy=multi-user.target
