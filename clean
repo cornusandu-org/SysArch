@@ -1,0 +1,5 @@
+#!/bin/sh
+sudo chattr -i ./image/usr/local/bin/first-boot.sh
+sudo chattr -i ./image/etc/passwd
+sudo chattr -i ./image/etc/shadow
+sudo rm -r ./image
