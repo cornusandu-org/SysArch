@@ -52,7 +52,12 @@ sysadmin ALL=(SYSTEM) ALL
 # Allow pacman specifically as root
 Defaults!/usr/bin/pacman runas_default=root
 Defaults!/usr/bin/pacman !targetpw
+Defaults!/usr/bin/pacman !noexec
 sysadmin ALL=(root) /usr/bin/pacman
+Defaults!/usr/bin/pacman-key runas_default=root
+Defaults!/usr/bin/pacman-key !targetpw
+Defaults!/usr/bin/pacman-key !noexec
+sysadmin ALL=(root) /usr/bin/pacman-key
 EOF
 
 # 2. Secure the drop-in file permissions (Sudo completely ignores files if permissions are wrong)

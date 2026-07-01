@@ -1,7 +1,12 @@
 #!/bin/sh
 
-sudo pacman -Syy
-sudo pacman -Syu base base-devel
-sudo pacman -Syu archlinux-tools
+sudo pacman -Scc --noconfirm
 
-sudo /usr/local/bin/first-boot.sh
+yes | sudo pacman-key --init
+sudo pacman-key --populate archlinux
+
+sudo pacman -Sy --noconfirm --disable-download-timeout archlinux-keyring
+
+sudo pacman -Syy --noconfirm
+sudo pacman -Syu base base-devel archlinux-tools --noconfirm
+sudo pacman -Syy --noconfirm
