@@ -18,4 +18,4 @@ sudo apt install podman systemd-container
 sudo pacman -Syu podman systemd
 ```
 
-Then, on first boot, run `osinit` as sysadmin.
+Then, on first boot, run `osinit` as sysadmin to finalise installation.
