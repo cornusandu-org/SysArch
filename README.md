@@ -1,5 +1,8 @@
 # SysArch
 
+> [!NOTE]
+> This is still in early development. Expect breaking changes.
+
 ## Initial State
 The `SYSTEM` user (the new root) has all capabilities and is apart of the `root` group. Its default password is `SYSTEM_`.
 
@@ -18,4 +21,9 @@ sudo apt install podman systemd-container
 sudo pacman -Syu podman systemd
 ```
 
+To build the OS, run `./build`. The output will be under `image/`.
+
 Then, on first boot, run `osinit` as sysadmin to finalise installation.
+
+## Booting in a VM, from the output
+To boot the OS based on the build output, run `./exec`. This will run it from the image/ output. Normally, you'd need to put the image/ contents onto a bootable installation.
