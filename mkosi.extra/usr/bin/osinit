@@ -1,0 +1,7 @@
+#!/bin/sh
+
+sudo pacman -Syy
+sudo pacman -Syu base base-devel
+sudo pacman -Syu archlinux-tools
+
+sudo /usr/local/bin/first-boot.sh

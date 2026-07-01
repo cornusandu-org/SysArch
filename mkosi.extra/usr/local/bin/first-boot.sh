@@ -48,6 +48,11 @@ Defaults:sysadmin noexec
 
 # Allow sysadmin to execute commands AS SYSTEM
 sysadmin ALL=(SYSTEM) ALL
+
+# Allow pacman specifically as root
+Defaults!/usr/bin/pacman runas_default=root
+Defaults!/usr/bin/pacman !targetpw
+sysadmin ALL=(root) /usr/bin/pacman
 EOF
 
 # 2. Secure the drop-in file permissions (Sudo completely ignores files if permissions are wrong)
