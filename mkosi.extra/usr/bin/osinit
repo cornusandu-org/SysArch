@@ -1,12 +1,8 @@
 #!/bin/sh
 
-sudo pacman -Scc --noconfirm
-
-yes | sudo pacman-key --init
+sudo pacman-key --init
 sudo pacman-key --populate archlinux
 
 sudo pacman -Sy --noconfirm --disable-download-timeout archlinux-keyring
 
-sudo pacman -Syy --noconfirm
 sudo pacman -Syu base base-devel archlinux-tools --noconfirm
-sudo pacman -Syy --noconfirm
