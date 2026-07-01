@@ -6,3 +6,4 @@ sudo pacman-key --populate archlinux
 sudo pacman -Sy --noconfirm --disable-download-timeout archlinux-keyring
 
 sudo pacman -Syu base base-devel archlinux-tools --noconfirm
+sudo pacman -Syy --noconfirm
